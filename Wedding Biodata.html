@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Wedding Biodata</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #f5f0e8;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        .biodata-card {
+            background: #fffdf5;
+            width: 680px;
+            border: 3px solid #8B5E1A;
+            position: relative;
+            padding: 28px 32px 24px;
+            box-shadow: 0 4px 30px rgba(139,94,26,0.15);
+        }
+        .corner { position: absolute; width: 70px; height: 70px; pointer-events: none; }
+        .corner.tl { top: 4px; left: 4px; }
+        .corner.tr { top: 4px; right: 4px; transform: scaleX(-1); }
+        .corner.bl { bottom: 4px; left: 4px; transform: scaleY(-1); }
+        .corner.br { bottom: 4px; right: 4px; transform: scale(-1,-1); }
+        .top-section { text-align: center; margin-bottom: 14px; padding-top: 4px; }
+        .ganesh-symbol { font-size: 44px; color: #8B5E1A; line-height: 1; margin-bottom: 2px; }
+        .mantra { font-family: 'Crimson Text', serif; font-size: 17px; color: #8B5E1A; letter-spacing: 1px; margin-bottom: 2px; }
+        .divider { height: 1.5px; background: linear-gradient(to right, transparent, #8B5E1A 20%, #8B5E1A 80%, transparent); margin: 8px 0; }
+        .header-row { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+        .header-left { flex: 1; padding-right: 16px; }
+        .bio-data-label { font-size: 13px; color: #5a3d10; letter-spacing: 2px; font-weight: 600; text-transform: uppercase; margin-bottom: 2px; }
+        .candidate-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: #c4730a; line-height: 1.2; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .photo-box { width: 130px; height: 155px; border: 2px solid #8B5E1A; background: #f0e6cc; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; }
+        .photo-box img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+        .details-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+        .details-table tr td { padding: 3.5px 0; vertical-align: top; color: #2a1a05; }
+        .details-table .label { width: 195px; font-weight: 600; color: #3a2808; }
+        .details-table .colon { width: 20px; text-align: center; color: #8B5E1A; font-weight: 600; }
+        .details-table .value { color: #2a1a05; font-weight: 400; text-transform: uppercase; font-size: 14.5px; }
+        .section-header { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: #c4730a; margin: 14px 0 8px; letter-spacing: 0.3px; }
+        .watermark { position: absolute; bottom: 60px; right: 60px; width: 200px; height: 200px; opacity: 0.06; pointer-events: none; font-size: 190px; line-height: 1; color: #8B5E1A; user-select: none; }
+        .btn-row { display: flex; gap: 10px; justify-content: center; margin-top: 16px; }
+        .btn { padding: 8px 22px; border: 1.5px solid #8B5E1A; background: transparent; color: #8B5E1A; font-family: 'Crimson Text', serif; font-size: 15px; cursor: pointer; letter-spacing: 0.5px; border-radius: 3px; transition: background 0.15s, color 0.15s; }
+        .btn:hover { background: #8B5E1A; color: #fffdf5; }
+        .sister-list { margin: 0; padding-left: 0; list-style: none; }
+        .sister-list li { padding: 1px 0; font-size: 14.5px; color: #2a1a05; text-transform: uppercase; }
+        @media print {
+            body { padding: 0; background: white; }
+            .btn-row { display: none; }
+            .biodata-card { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="biodata-card" id="biodataCard">
+
+        <!-- Corner SVG ornaments -->
+        <svg class="corner tl" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4 L4 30 Q4 4 30 4 Z" stroke="#8B5E1A" stroke-width="1.5" fill="none"/>
+            <path d="M2 2 Q2 35 35 2 Z" stroke="#8B5E1A" stroke-width="1" fill="none" opacity="0.5"/>
+            <circle cx="4" cy="4" r="2.5" fill="#8B5E1A"/>
+            <path d="M8 4 Q20 4 20 16" stroke="#8B5E1A" stroke-width="1" fill="none"/>
+            <path d="M4 8 Q4 20 16 20" stroke="#8B5E1A" stroke-width="1" fill="none"/>
+            <path d="M14 4 Q30 4 30 18" stroke="#c4730a" stroke-width="1.5" fill="none"/>
+            <path d="M4 14 Q4 30 18 30" stroke="#c4730a" stroke-width="1.5" fill="none"/>
+            <path d="M20 4 Q40 4 40 24" stroke="#8B5E1A" stroke-width="0.8" fill="none" opacity="0.6"/>
+            <path d="M4 20 Q4 40 24 40" stroke="#8B5E1A" stroke-width="0.8" fill="none" opacity="0.6"/>
+            <circle cx="14" cy="14" r="1.5" fill="#c4730a" opacity="0.7"/>
+            <circle cx="20" cy="20" r="2" fill="#8B5E1A" opacity="0.5"/>
+        </svg>
+        <svg class="corner tr" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4 L4 30 Q4 4 30 4 Z" stroke="#8B5E1A" stroke-width="1.5" fill="none"/>
+            <circle cx="4" cy="4" r="2.5" fill="#8B5E1A"/>
+            <path d="M8 4 Q20 4 20 16" stroke="#8B5E1A" stroke-width="1" fill="none"/>
+            <path d="M4 8 Q4 20 16 20" stroke="#8B5E1A" stroke-width="1" fill="none"/>
+            <path d="M14 4 Q30 4 30 18" stroke="#c4730a" stroke-width="1.5" fill="none"/>
+            <path d="M4 14 Q4 30 18 30" stroke="#c4730a" stroke-width="1.5" fill="none"/>
+            <path d="M20 4 Q40 4 40 24" stroke="#8B5E1A" stroke-width="0.8" fill="none" opacity="0.6"/>
+            <path d="M4 20 Q4 40 24 40" stroke="#8B5E1A" stroke-width="0.8" fill="none" opacity="0.6"/>
+            <circle cx="14" cy="14" r="1.5" fill="#c4730a" opacity="0.7"/>
+            <circle cx="20" cy="20" r="2" fill="#8B5E1A" opacity="0.5"/>
+        </svg>
+        <svg class="corner bl" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4 L4 30 Q4 4 30 4 Z" stroke="#8B5E1A" stroke-width="1.5" fill="none"/>
+            <circle cx="4" cy="4" r="2.5" fill="#8B5E1A"/>
+            <path d="M8 4 Q20 4 20 16" stroke="#8B5E1A" stroke-width="1" fill="none"/>
+            <path d="M4 8 Q4 20 16 20" stroke="#8B5E1A" stroke-width="1" fill="none"/>
+            <path d="M14 4 Q30 4 30 18" stroke="#c4730a" stroke-width="1.5" fill="none"/>
+            <path d="M4 14 Q4 30 18 30" stroke="#c4730a" stroke-width="1.5" fill="none"/>
+            <circle cx="14" cy="14" r="1.5" fill="#c4730a" opacity="0.7"/>
+            <circle cx="20" cy="20" r="2" fill="#8B5E1A" opacity="0.5"/>
+        </svg>
+        <svg class="corner br" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4 L4 30 Q4 4 30 4 Z" stroke="#8B5E1A" stroke-width="1.5" fill="none"/>
+            <circle cx="4" cy="4" r="2.5" fill="#8B5E1A"/>
+            <path d="M8 4 Q20 4 20 16" stroke="#8B5E1A" stroke-width="1" fill="none"/>
+            <path d="M4 8 Q4 20 16 20" stroke="#8B5E1A" stroke-width="1" fill="none"/>
+            <path d="M14 4 Q30 4 30 18" stroke="#c4730a" stroke-width="1.5" fill="none"/>
+            <path d="M4 14 Q4 30 18 30" stroke="#c4730a" stroke-width="1.5" fill="none"/>
+            <circle cx="14" cy="14" r="1.5" fill="#c4730a" opacity="0.7"/>
+            <circle cx="20" cy="20" r="2" fill="#8B5E1A" opacity="0.5"/>
+        </svg>
+
+        <!-- Watermark -->
+        <div class="watermark">🐘</div>
+
+        <!-- TOP SECTION -->
+        <div class="top-section">
+            <div class="ganesh-symbol">ॐ</div>
+            <div class="mantra">॥ श्री गणेशाय नमः ॥</div>
+        </div>
+        <div class="divider"></div>
+
+        <!-- HEADER ROW: Name + Photo -->
+        <div class="header-row">
+            <div class="header-left">
+                <div class="bio-data-label">BIO DATA</div>
+                <div class="candidate-name">Uddesh Gajanan Gharzade</div>
+
+                <table class="details-table">
+                    <tr>
+                        <td class="label">Date of Birth</td>
+                        <td class="colon">:</td>
+                        <td class="value">26 / 09 / 1998</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Place of Birth</td>
+                        <td class="colon">:</td>
+                        <td class="value">Nagpur</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Rashi</td>
+                        <td class="colon">:</td>
+                        <td class="value">Vrishabha</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Religion</td>
+                        <td class="colon">:</td>
+                        <td class="value">Hindu</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Caste</td>
+                        <td class="colon">:</td>
+                        <td class="value">Kunbi</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Sub Caste</td>
+                        <td class="colon">:</td>
+                        <td class="value">Bawane Kunbi</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Complexion</td>
+                        <td class="colon">:</td>
+                        <td class="value">Fair</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Height</td>
+                        <td class="colon">:</td>
+                        <td class="value">5 Feet 6 Inches</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Education</td>
+                        <td class="colon">:</td>
+                        <td class="value">B.Sc. (Physics, Chemistry, Maths)</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Occupation</td>
+                        <td class="colon">:</td>
+                        <td class="value">Assistant Supervisor</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Organisation Name</td>
+                        <td class="colon">:</td>
+                        <td class="value">Air India Engineering Services Ltd</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- PHOTO -->
+            <div>
+                <div class="photo-box">
+                    <!-- Photo embedded as base64 (truncated in display, full data preserved) -->
+                    <img src="" alt="Candidate Photo" id="candidatePhoto"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- FAMILY DETAILS -->
+        <div class="section-header">Family Details</div>
+        <table class="details-table">
+            <tr>
+                <td class="label">Father's Name</td>
+                <td class="colon">:</td>
+                <td class="value">Gajanan Gharzade</td>
+            </tr>
+            <tr>
+                <td class="label">Father's Occupation</td>
+                <td class="colon">:</td>
+                <td class="value">Retired</td>
+            </tr>
+            <tr>
+                <td class="label">Mother's Name</td>
+                <td class="colon">:</td>
+                <td class="value">Shobha Gharzade</td>
+            </tr>
+            <tr>
+                <td class="label">Mother's Occupation</td>
+                <td class="colon">:</td>
+                <td class="value">Homemaker</td>
+            </tr>
+            <tr>
+                <td class="label">Sisters</td>
+                <td class="colon">:</td>
+                <td class="value">
+                    <ul class="sister-list">
+                        <li>1. Priya Gharzade (Married)</li>
+                        <li>2. Sneha Gharzade (Unmarried)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Brothers</td>
+                <td class="colon">:</td>
+                <td class="value">None</td>
+            </tr>
+        </table>
+
+        <div class="divider"></div>
+
+        <!-- CONTACT DETAILS -->
+        <div class="section-header">Contact Details</div>
+        <table class="details-table">
+            <tr>
+                <td class="label">Address</td>
+                <td class="colon">:</td>
+                <td class="value">Nagpur, Maharashtra</td>
+            </tr>
+            <tr>
+                <td class="label">Mobile</td>
+                <td class="colon">:</td>
+                <td class="value">+91 XXXXX XXXXX</td>
+            </tr>
+        </table>
+
+        <div class="divider" style="margin-top: 16px;"></div>
+
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-row">
+        <button class="btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    </div>
+</div>
+</body>
+</html>
