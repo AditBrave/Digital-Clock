@@ -16,7 +16,6 @@ body {
 
 .clock {
     text-align: center;
-    text-align: center;
     padding: 50px 80px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
@@ -28,7 +27,6 @@ h1 {
     font-size: 80px;
     color: #00d4ff;
     letter-spacing: 5px;
-
 }
 
 p {
